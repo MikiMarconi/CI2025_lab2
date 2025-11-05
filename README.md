@@ -1,6 +1,6 @@
 # Traveling Salesman Problem (GA)
 
-This project solves symmetric TSP instances using a Genetic Algorithm.
+This lab solves symmetric TSP instances using a Genetic Algorithm.
 Approach
 - Representation: permutation of cities; fitness = tour length.
 - Selection: tournament; full generational replacement with best tracking.
