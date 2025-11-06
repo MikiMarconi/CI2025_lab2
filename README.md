@@ -1,17 +1,19 @@
-# Traveling Salesman Problem (GA)
+# TSP Laboratory – Genetic Algorithms
 
-This lab solves symmetric TSP instances using a Genetic Algorithm.
-Approach
-- Representation: permutation of cities; fitness = tour length.
-- Selection: tournament; full generational replacement with best tracking.
-- Crossover: Order Crossover (OX) and Partially Mapped Crossover (PMX).
-- Mutation: Swap and Insertion.
+## Problem Description
+The **Travelling Salesman Problem (TSP)** is a classic combinatorial optimization problem where, given a set of cities and the distances between them, the goal is to find the shortest possible route that visits each city exactly once and returns to the starting point.
 
-Experiments
-- Grid across categories (g, r1, r2), sizes (10–1000), and operator pairs {OX, PMX}×{Swap, Insert}.
-- Collected best tour length and runtime per run.
+## Genetic Operators
+Two mutation operators and two crossover operators were implemented and compared during the experiments.
 
-Results 
-- Best tour length increases with instance size.
-- Runtime grows with size; operator choice impacts time and quality differently.
+### Mutation Operators
+- **Swap Mutation**: randomly selects two cities in the tour and swaps their positions.  
+- **Insert Mutation**: removes a city and reinserts it at a different position in the tour.
 
+### Crossover Operators
+- **OX (Order Crossover)**: copies a subsequence from one parent and fills the remaining positions according to the order in the second parent, preserving the relative ordering of cities.  
+- **PMX (Partially Mapped Crossover)**: exchanges corresponding segments between parents and applies a mapping to maintain valid city positions without duplicates.
+
+## Conclusions
+To better visualize and compare the effects of different operators and configurations, several **performance plots** were generated.   
+The visual comparisons highlight how each combination of crossover and mutation affects the overall performance of the genetic algorithm.
